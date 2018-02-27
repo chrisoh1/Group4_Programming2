@@ -20,6 +20,10 @@ var wholeTable = document.getElementsByClassName('divListOfClasses').item(0);
 wholeTable.style.paddingLeft = '20px';
 wholeTable.style.paddingRight = '20px';
 
+// length of table rows, array of multiple section rows
+let rowLength = 0;
+let rows = [];
+
 // when the page loads, do below
 window.onload = function() {
 
@@ -175,5 +179,21 @@ function showAbbr() {
         else if(table[i].innerHTML == "FS,NI") {
             table[i].title = "Foundation Symbolic Reasoning, Non-introductory Course";
         }
+    }
+
+    /*
+     * Eliminates redundant date and credit columns
+     */
+    if(document.querySelectorAll('table.listOfClasses')) {
+
+        [].forEach.call(document.querySelectorAll('tr'), tr => {
+            rowLength = tr.cells.length;
+            if(rowLength > 11) {
+                // The date column
+                tr.cells[rowLength-1].remove();
+                // The credit column
+                tr.cells[rowLength-6].remove();
+            }
+       });
     }
 }
