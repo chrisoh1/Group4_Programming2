@@ -17,8 +17,13 @@ document.body.style.paddingTop = '30px';
 
 // table padding
 var wholeTable = document.getElementsByClassName('divListOfClasses').item(0);
-wholeTable.style.paddingLeft = '20px';
-wholeTable.style.paddingRight = '20px';
+wholeTable.style.paddingLeft = '100px';
+wholeTable.style.paddingRight = '100px';
+
+// header padding
+var header = document.getElementsByTagName("H1").item(0);
+header.style.paddingLeft = '80px';
+header.style.paddingRight = '80px';
 
 // length of table rows, array of multiple section rows
 let rowLength = 0;
