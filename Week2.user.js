@@ -192,7 +192,7 @@ function showAbbr() {
                 // The date column
                 tr.cells[rowLength-1].remove();
                 // The credit column
-                tr.cells[rowLength-6].remove();
+                tr.cells[rowLength-8].remove();
             }
        });
     }
